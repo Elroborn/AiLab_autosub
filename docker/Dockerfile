@@ -29,8 +29,8 @@ RUN pip install --upgrade pip
 COPY requirements.txt /demos
 
 RUN pip install -r requirements.txt
-
-RUN apt-get -y install abiword
+RUN apt-get update
+RUN apt-get -y install ffmpeg
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y tesseract-ocr
 
